@@ -49,7 +49,12 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-tree.lua" -- Show the tree in file explorer
 
   -- Colorschemes
-  -- use "folke/tokyonight.nvim" -- Colors
+  use "folke/tokyonight.nvim" -- Colors
+  -- Lualine
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
 
    -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -63,6 +68,11 @@ return packer.startup(function(use)
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
+  -- LSP
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use LSP installer
+
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
