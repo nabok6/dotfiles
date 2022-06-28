@@ -1,4 +1,4 @@
-function OrgImports()
+function OrganizeImports()
   local wait_ms = 1000
   local params = vim.lsp.util.make_range_params()
   params.context = { only = { "source.organizeImports" } }
@@ -14,4 +14,4 @@ function OrgImports()
   end
 end
 
-return OrgImports
+return OrganizeImports
